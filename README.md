@@ -7,8 +7,8 @@ Conteúdo, preços, carências e benefícios seguem a proposta `ODONT_Proposta_R
 ## Estrutura
 
 - `index.html` — página única: hero com carteirinha digital, benefícios, procedimentos cobertos, sorteio semanal, desconto em farmácia, rede credenciada, app, planos (Standard / Advanced / Diamond), carências, atendimento e rodapé com ANS.
-- `styles.css` — identidade Odont (roxo `#45138E`, roxo escuro `#241046`, magenta `#DE217D`, lilás `#F4EFFC`), fonte Outfit.
-- `assets/` — logos Odont e selo Prêmio RA 2026 extraídos do deck.
+- `styles.css` — identidade visual do Grupo Mateus (azul `#0038A0`, marinho `#051E5A`, azul claro `#0093D9`, vermelho `#EA0A2A`, amarelo `#FFC629`), fonte Montserrat, como em grupomateus.com.br.
+- `assets/` — logo Grupo Mateus, logos Odont, carteirinha Mateus Odonto Standard e selo Prêmio RA 2026.
 
 Sem dependências nem build: abra `index.html` ou publique a pasta em qualquer host estático (GitHub Pages, Vercel, Netlify).
 
