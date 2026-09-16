@@ -51,8 +51,7 @@ p{margin:0 0 1em}
 .topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--lilac2)}
 .topbar__in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
 .brand{display:flex;align-items:center;gap:14px;text-decoration:none}
-.brand img{height:44px;width:auto}
-.brand__product{color:var(--roxo);font-weight:800;font-size:1.35rem;letter-spacing:-.01em;line-height:1;margin-top:8px}
+.brand img{height:50px;width:auto}
 .topnav{display:flex;gap:26px}
 .topnav a{color:var(--text);text-decoration:none;font-weight:500}
 .topnav a:hover{color:var(--roxo)}
@@ -216,6 +215,6 @@ input:focus,select:focus{outline:3px solid rgba(69,19,142,.25);border-color:var(
   .rede{grid-template-columns:1fr}
   .pct{width:220px;height:220px}.pct b{font-size:4.6rem}
   .phone{width:240px;height:480px}
-  .brand__product{font-size:1.1rem}
+  .brand img{height:40px}
   .stats{gap:24px 36px}
 }
