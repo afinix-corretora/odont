@@ -117,6 +117,19 @@ input:focus,select:focus{outline:3px solid rgba(69,19,142,.25);border-color:var(
 
 /* rede */
 .rede{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:16px;align-items:end;background:#fff;padding:24px;border-radius:var(--r)}
+.pracas{margin-top:56px}
+.pracas__head{max-width:680px;margin-bottom:22px}
+.pracas__head h3{font-size:1.4rem}
+.pracas__table{overflow-x:auto;background:#fff;border-radius:var(--r)}
+.pracas table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:760px}
+.pracas th,.pracas td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--lilac2);vertical-align:top}
+.pracas th{color:var(--ink);font-weight:700;background:var(--lilac)}
+.pracas th:nth-child(n+2):nth-child(-n+4),.pracas td:nth-child(n+2):nth-child(-n+4){text-align:right;white-space:nowrap}
+.pracas td:first-child{font-weight:600;color:var(--ink)}
+.pracas td:nth-child(3){color:var(--roxo);font-weight:700}
+.pracas td:last-child{color:var(--muted)}
+.pracas tfoot td{font-weight:700;color:var(--ink);border-bottom:0;background:var(--lilac)}
+.pracas tfoot td:last-child{font-weight:500;color:var(--muted)}
 
 /* app */
 .applist{margin:0 0 1.5rem;padding-left:1.3em;font-size:1.08rem}

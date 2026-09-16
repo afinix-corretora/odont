@@ -145,27 +145,62 @@
   <div class="wrap">
     <div class="section__head">
       <h2>Encontre um dentista perto de você</h2>
-      <p>Credenciamento direto com o dentista, sem intermediação, com rede reforçada nas praças onde o Grupo Mateus está.</p>
+      <p>Rede credenciada própria da Odont, com contrato direto com cada clínica e consultório — e expansão dirigida pelo mapa de lojas do Grupo Mateus.</p>
     </div>
     <dl class="stats stats--dark">
-      <div><dt>+16 mil</dt><dd>dentistas e clínicas credenciados</dd></div>
-      <div><dt>2.000+</dt><dd>municípios com rede ativa</dd></div>
+      <div><dt>+16 mil</dt><dd>dentistas credenciados</dd></div>
+      <div><dt>530</dt><dd>municípios com rede ativa</dd></div>
       <div><dt>27</dt><dd>estados com cobertura</dd></div>
+      <div><dt>20</dt><dd>especialidades atendidas</dd></div>
     </dl>
-    <form class="rede" action="https://odont.com.br/rede-credenciada/" method="get" target="_blank" rel="noopener">
+
+    <form class="rede" id="formRede" action="https://rede.odontosfera.com.br/RedeCredenciada.aspx?Operadora=422088" method="get" target="_blank" rel="noopener">
       <label>Estado
-        <select name="uf" required>
+        <select id="ufSel" name="uf" required>
           <option value="">Selecione</option>
-          <option>Maranhão</option><option>Pará</option><option>Piauí</option><option>Ceará</option>
-          <option>Bahia</option><option>Sergipe</option><option>Pernambuco</option><option>Paraíba</option>
-          <option>Outros estados</option>
         </select>
       </label>
-      <label>Cidade<input type="text" name="cidade" placeholder="Digite a cidade"></label>
-      <label>Bairro<input type="text" name="bairro" placeholder="Digite o bairro"></label>
+      <label>Cidade
+        <input type="text" id="cidadeInp" name="cidade" list="cidadesList" placeholder="Digite a cidade" autocomplete="off">
+        <datalist id="cidadesList"></datalist>
+      </label>
+      <label>Especialidade
+        <select name="esp">
+          <option value="">Todas</option>
+          <option>Clínico geral</option><option>Urgência 24h</option><option>Cirurgia</option><option>Dentística</option>
+          <option>Endodontia</option><option>Periodontia</option><option>Prevenção</option><option>Radiologia</option>
+          <option>Odontopediatria</option><option>Ortodontia</option><option>Prótese</option><option>Clareamento</option>
+          <option>Bucomaxilofacial</option><option>DTM</option><option>Pacientes especiais</option>
+        </select>
+      </label>
       <button class="btn btn--solid" type="submit">Consultar rede credenciada</button>
     </form>
-    <p class="fine">Primeira consulta: agende com um clínico geral. Agendamento assistido pelo Concierge em até 24h úteis no plano Diamond.</p>
+    <p class="fine" id="redeHint">Selecione o estado para ver as cidades com rede ativa. A consulta abre a busca oficial da operadora, com endereço, telefone e especialidades de cada clínica.</p>
+
+    <div class="pracas">
+      <div class="pracas__head">
+        <h3>Rede nas praças do Grupo Mateus</h3>
+        <p>Clínicas e consultórios credenciados hoje nos estados onde estão as 283 lojas do grupo. Dados da rede credenciada da operadora, setembro de 2026.</p>
+      </div>
+      <div class="pracas__table">
+        <table>
+          <thead><tr><th>Estado</th><th>Lojas Mateus</th><th>Clínicas credenciadas</th><th>Municípios com rede</th><th>Principais cidades</th></tr></thead>
+          <tbody>
+            <tr><td>Maranhão</td><td>145</td><td>75</td><td>13</td><td>São Luís, Imperatriz, Caxias, Bacabal, Açailândia, Balsas, Santa Inês, Timon</td></tr>
+            <tr><td>Pará</td><td>72</td><td>52</td><td>12</td><td>Belém, Ananindeua, Santarém, Marabá, Castanhal, Parauapebas, Altamira</td></tr>
+            <tr><td>Pernambuco</td><td>13</td><td>152</td><td>23</td><td>Recife, Caruaru, Petrolina, Olinda, Jaboatão dos Guararapes, Garanhuns</td></tr>
+            <tr><td>Ceará</td><td>14</td><td>128</td><td>23</td><td>Fortaleza, Caucaia, Juazeiro do Norte, Sobral, Maracanaú, Crato</td></tr>
+            <tr><td>Bahia</td><td>10</td><td>125</td><td>35</td><td>Salvador, Feira de Santana, Camaçari, Vitória da Conquista, Alagoinhas</td></tr>
+            <tr><td>Paraíba</td><td>9</td><td>72</td><td>13</td><td>João Pessoa, Campina Grande, Patos, Cabedelo, Bayeux</td></tr>
+            <tr><td>Piauí</td><td>13</td><td>16</td><td>3</td><td>Teresina, Parnaíba, São Raimundo Nonato</td></tr>
+            <tr><td>Sergipe</td><td>3</td><td>39</td><td>5</td><td>Aracaju, Nossa Senhora do Socorro, Itabaiana, Lagarto, Estância</td></tr>
+            <tr><td>Alagoas</td><td>5</td><td>31</td><td>5</td><td>Maceió, Arapiraca, Palmeira dos Índios, Rio Largo, Coruripe</td></tr>
+          </tbody>
+          <tfoot><tr><td>Total</td><td>284</td><td>690</td><td>132</td><td>+ rede nos demais 18 estados</td></tr></tfoot>
+        </table>
+      </div>
+      <p class="fine">Cada clínica credenciada pode reunir vários dentistas. Antes do lançamento, a Odont abre credenciamento por CEP nas praças com menor densidade — a cobertura por município é meta contratual, com relatório mensal ao Grupo Mateus.</p>
+    </div>
   </div>
 </section>
 
@@ -318,5 +353,27 @@
   <a class="totop" href="#top">Voltar ao topo</a>
 </footer>
 
+
+<script>
+(function(){
+  var uf=document.getElementById('ufSel'),cid=document.getElementById('cidadeInp'),dl=document.getElementById('cidadesList'),hint=document.getElementById('redeHint'),form=document.getElementById('formRede');
+  var dados=null;
+  var nomes={"ACRE":"Acre","ALAGOAS":"Alagoas","AMAPA":"Amapá","AMAZONAS":"Amazonas","BAHIA":"Bahia","BRASILIA":"Distrito Federal","CEARA":"Ceará","ESPIRITO SANTO":"Espírito Santo","GOIAS":"Goiás","MARANHAO":"Maranhão","MATO GROSSO":"Mato Grosso","MATO GROSSO DO SUL":"Mato Grosso do Sul","MINAS GERAIS":"Minas Gerais","PARA":"Pará","PARAIBA":"Paraíba","PARANA":"Paraná","PERNAMBUCO":"Pernambuco","PIAUI":"Piauí","RIO DE JANEIRO":"Rio de Janeiro","RIO GRANDE DO NORTE":"Rio Grande do Norte","RIO GRANDE DO SUL":"Rio Grande do Sul","RONDONIA":"Rondônia","RORAIMA":"Roraima","SANTA CATARINA":"Santa Catarina","SAO PAULO":"São Paulo","SERGIPE":"Sergipe","TOCANTINS":"Tocantins"};
+  var prioridade=["MARANHAO","PARA","PIAUI","CEARA","BAHIA","PERNAMBUCO","PARAIBA","SERGIPE","ALAGOAS"];
+  function titulo(s){return s.toLowerCase().replace(/(^|\s|')(\S)/g,function(m,a,b){return a+b.toUpperCase();}).replace(/\bD([aeo]s?)\b/g,function(m,p){return 'd'+p;});}
+  fetch('assets/rede-municipios.json').then(function(r){return r.json();}).then(function(d){
+    dados=d; var keys=prioridade.concat(Object.keys(d).filter(function(k){return prioridade.indexOf(k)<0;}).sort());
+    keys.forEach(function(k){var o=document.createElement('option');o.value=k;o.textContent=nomes[k]||k;uf.appendChild(o);});
+  }).catch(function(){Object.keys(nomes).forEach(function(k){var o=document.createElement('option');o.value=k;o.textContent=nomes[k];uf.appendChild(o);});});
+  uf.addEventListener('change',function(){
+    dl.innerHTML='';cid.value='';
+    if(!dados||!dados[uf.value]) return;
+    var cs=dados[uf.value].map(titulo).sort();
+    cs.forEach(function(c){var o=document.createElement('option');o.value=c;dl.appendChild(o);});
+    hint.textContent=(nomes[uf.value]||uf.value)+': '+cs.length+(cs.length===1?' município':' municípios')+' com rede ativa — '+cs.slice(0,6).join(', ')+(cs.length>6?' e outros.':'.');
+  });
+  form.addEventListener('submit',function(e){e.preventDefault();window.open(form.action,'_blank','noopener');});
+})();
+</script>
 </body>
 </html>

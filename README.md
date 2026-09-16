@@ -9,12 +9,14 @@ Conteúdo, preços, carências e benefícios seguem a proposta `ODONT_Proposta_R
 - `index.html` — página única: hero com carteirinha digital, benefícios, procedimentos cobertos, sorteio semanal, desconto em farmácia, rede credenciada, app, planos (Standard / Advanced / Diamond), carências, atendimento e rodapé com ANS.
 - `styles.css` — identidade visual do Grupo Mateus (azul `#0038A0`, marinho `#051E5A`, azul claro `#0093D9`, vermelho `#EA0A2A`, amarelo `#FFC629`), fonte Montserrat, como em grupomateus.com.br.
 - `assets/` — logo Grupo Mateus, logos Odont, carteirinha Mateus Odonto Standard e selo Prêmio RA 2026.
+- `assets/rede-municipios.json` — municípios com rede ativa por estado, raspados da busca oficial da operadora (rede.odontosfera.com.br, operadora 422088) em 16/09/2026. Alimenta o seletor de estado/cidade da seção de rede.
 
 Sem dependências nem build: abra `index.html` ou publique a pasta em qualquer host estático (GitHub Pages, Vercel, Netlify).
 
 ## Pendências antes de publicar
 
 - Links de **Termo de adesão**, **Condições Gerais** e **Regulamento do sorteio** apontam para odont.com.br — substituir pelos PDFs definitivos.
-- Consulta do número da sorte e busca de rede são apenas UI; integrar à API da operadora.
+- Consulta do número da sorte é apenas UI; integrar à API da operadora.
+- A busca de rede abre a consulta oficial da Odontosfera (não aceita parâmetros por URL). Os totais por estado na tabela "Rede nas praças do Grupo Mateus" contam clínicas/consultórios (CRO/CNPJ) e devem ser reprocessados antes da publicação — script de raspagem em `tools/`.
 - Preços são os de venda sugeridos na proposta e podem mudar no lançamento.
 - Nome e marca "Mateus Odonto" dependem de aprovação do Grupo Mateus; o logo do Mateus não foi incluído.
